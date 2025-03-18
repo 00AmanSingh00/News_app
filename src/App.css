@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+  background-color: black;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: var(--secondary-text-color);
+  line-height: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1180px;
+  margin-inline: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+
+
+/* /* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 24px;
+  color: #3cfa6f;
+  margin-left: 16px;
+}
+
+/* Popup Menu Styles */
+.popup-menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1001;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-menu.active {
+  display: flex; /* Show when active */
+}
+
+.popup-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.popup-menu ul li {
+  padding: 15px;
+  font-size: 24px;
+  color: #3cfa6f;
+  cursor: pointer;
+}
+
+.popup-menu ul li:hover {
+  color: #08fcd0;
+}
+
+.popup-menu ul li.active {
+  color: #08fcd0;
+}
+.my-account-link:hover{
+  color: #08fcd0;
+}
+.my-account-link.active {
+  color: #08fcd0;
+}
+
+
+/* Close Button for Popup Menu */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #3cfa6f;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #08fcd0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* Show hamburger menu on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide regular nav links on smaller screens */
+  }
+
+ 
+
+  .popup-menu {
+    display: none; /* Ensure popup menu is hidden by default */
+  }
+}
+
+
+/* Popup Menu Styles */
+.popup-menu ul li {
+  padding: 15px;
+  font-size: 24px;
+  color: #3cfa6f;
+  cursor: pointer;
+}
+
+.popup-menu ul li:hover {
+  color: #08fcd0;
+}
+
+.popup-menu ul li.active {
+  color: #08fcd0;
+}
+
+
+
+
+
+/* 
+////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar Styles */
+/* Navbar Styles */
+nav {
+  width: 100%;
+  max-width: 100%; /* Ensure navbar doesn't exceed viewport width */
+  background-color: black;
+  box-shadow: none;
+  border-bottom: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 0;
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between elements */
+  padding: 15px 50px;
+  max-width: 100%; /* Ensure container doesn't overflow */
+}
+
+.company-logo {
+  margin-right: 13rem;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+ 
+}
+
+.company-logo img {
+  width: 100px;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  padding: 0;
+  margin-left: 15rem;
+}
+
+.nav-links ul li {
+  padding: 10px;
+  cursor: pointer;
+  color: #3cfa6f;
+  font-family: "arial";
+  font-size: 25px;
+}
+
+.nav-links ul li:hover {
+  color: #08fcd0;
+}
+
+.nav-links ul li.active {
+  color: #08fcd0;
+}
+
+
+/* Add these styles to your existing CSS */
+/* Add these styles to your existing CSS */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto; /* Push search bar to the right */
+  
+  
+}
+
+.combined-search {
+  display: flex;
+  margin-top:-1rem;
+  align-items: center;
+  border: 1px solid ;
+  box-shadow:2px 2px 3px #1f191a;
+  border-radius: 35px; /* Rounded borders */
+  overflow: hidden; /* Ensure child elements respect the border radius */
+  background: linear-gradient(90deg, red, green, blue, yellow, brown, black, teal, white);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.news-input {
+  flex-grow: 1;
+  color:black;
+  height: 40px;
+  padding-inline: 12px;
+  border: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: transparent; /* Ensure input background is transparent */
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%); /* Slanted right side */
+}
+
+.search-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .combined-search {
+    width: 100%;
+  }
+
+  .news-input {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .search-button {
+    width: 30%;
+    padding: 6px 12px;
+  }
+
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-input {
+    font-size: 12px;
+  }
+
+  .search-button {
+    padding: 4px 8px;
+  }
+
+  .search-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.voice-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 26px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px; /* Add margin to ensure it doesn't get cut off */
+  margin-top:-0.5rem;
+  
+}
+
+.voice-button img {
+  width: 60px;
+  height: 60px;
+  filter: invert(1);
+}
+
+.my-account-link {
+  width: 40px;
+  height: 40px;
+  color: #3cfa6f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-nav {
+    padding: 10px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .company-logo img {
+    display: none;  /* Hide logo on smaller screens */
+  }
+
+  .nav-links ul {
+    gap: 10px;
+  }
+
+  .nav-links ul li {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .search-bar {
+    gap: 4px;
+  }
+
+  .news-input {
+    width: 150px;
+  }
+
+  .voice-button img {
+    width: 40px;
+    height: 40px;
+    margin-top:-0.5rem;
+  }
+
+  .my-account-link  {
+    width: 30px; /* Further reduce account logo size for smaller screens */
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    justify-content: space-between; /* Adjust spacing for very small screens */
+    align-items: center; /* Ensure all items are aligned */
+  }
+
+  .company-logo {
+    display: none; /* Ensure logo is hidden */
+  }
+
+  .nav-links ul {
+    gap: 5px;
+    flex-wrap: wrap; /* Allow navigation links to wrap */
+    justify-content: center; /* Center navigation links */
+  }
+
+  .nav-links ul li {
+    font-size: 14px; /* Further reduce font size for very small screens */
+  }
+
+  .search-bar {
+    display: flex; /* Ensure search bar is a flex container */
+    align-items: center; /* Align items vertically in the center */
+    gap: 2px; /* Add some spacing between elements */
+    margin-top: 10px;
+    margin-left: 0;
+    width:19rem;
+    flex-wrap: nowrap; /* Prevent wrapping of elements inside search bar */
+  }
+
+  .news-input {
+    width: 100px; /* Adjust input width */
+  }
+
+  .search-button {
+    width: 60px;
+    font-size: 12px;
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .voice-button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .my-account-link img {
+    width: 25px; /* Further reduce account logo size for very small screens */
+    height: 25px;
+    margin-left: 10px; /* Add margin to align properly */
+  }
+
+  .hamburger-menu {
+    display: flex; /* Ensure hamburger menu is aligned */
+    align-items: center; /* Align hamburger menu vertically */
+
+  }
+}
+
+
+.save-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.save-button {
+  background-color: #0f0b0b;
+  color: yellow;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px double black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  width: 29rem;
+  margin-bottom:5px;
+}
+
+.save-button:hover {
+  background-color: #313233;
+  color: #0ceefa;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .save-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .save-button {
+    font-size: 12px;
+    padding: 6px 12px;
+    width: 7rem;
+  }
+}
