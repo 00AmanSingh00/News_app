@@ -21,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
           placeholder="Search"
         />
         <button className="search-button" onClick={handleSearch}>
-          <img src="src/assets/search_button.png" alt="Search" className="search-icon" />
+          <img src="./search_button.png" alt="Search" className="search-icon" />
         </button>
       </div>
       <VoiceSearch setQuery={setQuery} />
