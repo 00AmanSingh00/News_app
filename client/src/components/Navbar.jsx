@@ -19,7 +19,7 @@ const Navbar = ({ onNavItemClick, curSelectedNav, onSearch, setIsAuthenticated }
           onClick={() => window.location.reload()}
           className="company-logo"
         >
-          <img src="src/assets/logomain.png" alt="company logo" className="logo-image" />
+          <img src="public/logomain.png" alt="company logo" className="logo-image" />
         </a>
         <div className="nav-links">
           <ul className="flex">
