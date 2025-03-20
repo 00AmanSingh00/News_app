@@ -53,7 +53,8 @@ ul {
   cursor: pointer;
   font-size: 24px;
   color: #3cfa6f;
-  margin-left: 16px;
+  margin-left: -50px;
+  padding-bottom:5px;
 }
 
 /* Popup Menu Styles */
@@ -201,7 +202,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Distribute space between elements */
-  padding: 15px 50px;
+  padding: 15px 7px;
   max-width: 100%; /* Ensure container doesn't overflow */
 }
 
@@ -471,6 +472,7 @@ nav {
   .voice-button img {
     width: 30px;
     height: 30px;
+    margin-left:30px;
   }
 
   .my-account-link img {
@@ -480,8 +482,8 @@ nav {
   }
 
   .hamburger-menu {
-    display: flex; /* Ensure hamburger menu is aligned */
-    align-items: center; /* Align hamburger menu vertically */
+    display: flex; 
+    align-items: center; 
 
   }
 }
@@ -532,3 +534,7 @@ nav {
     width: 7rem;
   }
 }
+
+
+
+
