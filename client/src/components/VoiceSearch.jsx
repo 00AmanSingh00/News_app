@@ -25,7 +25,7 @@ const VoiceSearch = ({ setQuery }) => {
 
   return (
     <button className="voice-button" onClick={startVoiceRecognition}>
-      <img src="src/assets/mike_img.png" alt="voice search" width="50px" height="50px" />
+      <img src="./mike_img.png" alt="voice search" width="50px" height="50px" />
     </button>
   );
 };
