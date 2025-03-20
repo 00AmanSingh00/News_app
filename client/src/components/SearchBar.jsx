@@ -1,32 +1,32 @@
 import React, { useState } from 'react';
-import VoiceSearch from './VoiceSearch';
+import axios from 'axios';
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+const Signup = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
 
-  const handleSearch = () => {
-    if (query.trim()) {
-      onSearch(query); // Call onSearch with the query
-    }
-  };
+    const handleSignup = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:5000/api/signup', { email, password });
+            setMessage(response.data.message);
+        } catch (error) {
+            setMessage(error.response?.data?.message || 'Signup Failed');
+        }
+    };
 
-  return (
-    <div className="search-bar flex">
-      <div style={{width:"20rem"}}  className="combined-search">
-        <input
-          type="text"
-          className="news-input"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search"
-        />
-        <button className="search-button" onClick={handleSearch}>
-          <img src="./search_button.png" alt="Search" className="search-icon" />
-        </button>
-      </div>
-      <VoiceSearch setQuery={setQuery} />
-    </div>
-  );
+    return (
+        <div>
+            <h2>Signup</h2>
+            <form onSubmit={handleSignup}>
+                <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <button type="submit">Signup</button>
+            </form>
+            <p>{message}</p>
+        </div>
+    );
 };
 
-export default SearchBar;
+export default Signup;
