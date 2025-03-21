@@ -12,7 +12,7 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div className="search-bar flex">
-      <div style={{width:"20rem"}}  className="combined-search">
+      <div style={{width:"16rem"}}  className="combined-search">
         <input
           type="text"
           className="news-input"
