@@ -15,7 +15,7 @@ export const fetchNews = async (query, page = 1) => {
 
     // Fetch data directly from the API
     const apiKey = import.meta.env.VITE_API_KEY;
-    const apiUrl = `${import.meta.env.VITE_API_URI}category=${query}&page=${page}&apiKey=${apiKey}`;
+    const apiUrl = `${import.meta.env.VITE_API_URI}?category=${query}&page=${page}&apiKey=${apiKey}`;
 
     const response = await fetch(apiUrl);
 
