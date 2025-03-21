@@ -34,7 +34,7 @@ const Logout = ({ setIsAuthenticated }) => {
         background: "transparent",
         border: "none",
         cursor: "pointer",
-        marginLeft: "auto",
+        marginRight: "30px",
         transform: isRotating ? "rotateY(180deg)" : "rotateY(0deg)",
         transition: "transform 1s ease, color 0.3s ease",
         color: isClicked ? "black" : "#3A1212",
